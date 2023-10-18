@@ -1,7 +1,5 @@
 github.com/Dharitri-org/protobuf v1.3.2 h1:G3mbGffEoUVcSnMRYeC1kyZI3+VUvEB4fOcLKYe98/o=
 github.com/Dharitri-org/protobuf v1.3.2/go.mod h1:P1XiOD3dCwIKUDQYPy72D8LYyHL2YPYrpS2s69NZV8Q=
-github.com/Dharitri-org/sme-vm-common v0.0.7 h1:M3peoADZy4Nes+NvbdU01NekIQg2y0ZstZrxQbRIXwo=
-github.com/Dharitri-org/sme-vm-common v0.0.7/go.mod h1:Dgpp+8uC8vxS99sw++FDvc63Yn65T32YqrWTyituNLk=
 github.com/aead/siphash v1.0.1/go.mod h1:Nywa3cDsYNNK3gaciGTWPwHt0wlpNV15vwmswBAUSII=
 github.com/btcsuite/btcd v0.20.1-beta/go.mod h1:wVuoA8VJLEcwgqHBwHmzLRazpKxTv13Px/pDuV7OomQ=
 github.com/btcsuite/btclog v0.0.0-20170628155309-84c8d2346e9f/go.mod h1:TdznJufoqS23FtqVCzL0ZqgP5MqXbb4fg/WgDys70nA=

@@ -3,7 +3,6 @@ module github.com/Dharitri-org/sme-core
 go 1.19
 
 require (
-	github.com/Dharitri-org/sme-vm-common v0.0.7
 	github.com/btcsuite/btcutil v1.0.2
 	github.com/denisbrodbeck/machineid v1.0.1
 	github.com/gogo/protobuf v1.3.2

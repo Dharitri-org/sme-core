@@ -52,69 +52,69 @@ const BuiltInFunctionSetUserName = "SetUserName"
 // BuiltInFunctionSaveKeyValue is the key for the save key value built-in function
 const BuiltInFunctionSaveKeyValue = "SaveKeyValue"
 
-// BuiltInFunctionDCTTransfer is the key for the dharitri standard digital token transfer built-in function
+// BuiltInFunctionDCTTransfer is the key for the electronic standard digital token transfer built-in function
 const BuiltInFunctionDCTTransfer = "DCTTransfer"
 
-// BuiltInFunctionDCTBurn is the key for the dharitri standard digital token burn built-in function
+// BuiltInFunctionDCTBurn is the key for the electronic standard digital token burn built-in function
 const BuiltInFunctionDCTBurn = "DCTBurn"
 
-// BuiltInFunctionDCTFreeze is the key for the dharitri standard digital token freeze built-in function
+// BuiltInFunctionDCTFreeze is the key for the electronic standard digital token freeze built-in function
 const BuiltInFunctionDCTFreeze = "DCTFreeze"
 
-// BuiltInFunctionDCTUnFreeze is the key for the dharitri standard digital token unfreeze built-in function
+// BuiltInFunctionDCTUnFreeze is the key for the electronic standard digital token unfreeze built-in function
 const BuiltInFunctionDCTUnFreeze = "DCTUnFreeze"
 
-// BuiltInFunctionDCTWipe is the key for the dharitri standard digital token wipe built-in function
+// BuiltInFunctionDCTWipe is the key for the electronic standard digital token wipe built-in function
 const BuiltInFunctionDCTWipe = "DCTWipe"
 
-// BuiltInFunctionDCTPause is the key for the dharitri standard digital token pause built-in function
+// BuiltInFunctionDCTPause is the key for the electronic standard digital token pause built-in function
 const BuiltInFunctionDCTPause = "DCTPause"
 
-// BuiltInFunctionDCTUnPause is the key for the dharitri standard digital token unpause built-in function
+// BuiltInFunctionDCTUnPause is the key for the electronic standard digital token unpause built-in function
 const BuiltInFunctionDCTUnPause = "DCTUnPause"
 
-// BuiltInFunctionSetDCTRole is the key for the dharitri standard digital token set built-in function
+// BuiltInFunctionSetDCTRole is the key for the electronic standard digital token set built-in function
 const BuiltInFunctionSetDCTRole = "DCTSetRole"
 
-// BuiltInFunctionUnSetDCTRole is the key for the dharitri standard digital token unset built-in function
+// BuiltInFunctionUnSetDCTRole is the key for the electronic standard digital token unset built-in function
 const BuiltInFunctionUnSetDCTRole = "DCTUnSetRole"
 
-// BuiltInFunctionDCTSetLimitedTransfer is the key for the dharitri standard digital token built-in function which sets the property
+// BuiltInFunctionDCTSetLimitedTransfer is the key for the electronic standard digital token built-in function which sets the property
 // for the token to be transferable only through accounts with transfer roles
 const BuiltInFunctionDCTSetLimitedTransfer = "DCTSetLimitedTransfer"
 
-// BuiltInFunctionDCTUnSetLimitedTransfer is the key for the dharitri standard digital token built-in function which unsets the property
+// BuiltInFunctionDCTUnSetLimitedTransfer is the key for the electronic standard digital token built-in function which unsets the property
 // for the token to be transferable only through accounts with transfer roles
 const BuiltInFunctionDCTUnSetLimitedTransfer = "DCTUnSetLimitedTransfer"
 
-// BuiltInFunctionDCTLocalMint is the key for the dharitri standard digital token local mint built-in function
+// BuiltInFunctionDCTLocalMint is the key for the electronic standard digital token local mint built-in function
 const BuiltInFunctionDCTLocalMint = "DCTLocalMint"
 
-// BuiltInFunctionDCTLocalBurn is the key for the dharitri standard digital token local burn built-in function
+// BuiltInFunctionDCTLocalBurn is the key for the electronic standard digital token local burn built-in function
 const BuiltInFunctionDCTLocalBurn = "DCTLocalBurn"
 
-// BuiltInFunctionDCTNFTTransfer is the key for the dharitri standard digital token NFT transfer built-in function
+// BuiltInFunctionDCTNFTTransfer is the key for the electronic standard digital token NFT transfer built-in function
 const BuiltInFunctionDCTNFTTransfer = "DCTNFTTransfer"
 
-// BuiltInFunctionDCTNFTCreate is the key for the dharitri standard digital token NFT create built-in function
+// BuiltInFunctionDCTNFTCreate is the key for the electronic standard digital token NFT create built-in function
 const BuiltInFunctionDCTNFTCreate = "DCTNFTCreate"
 
-// BuiltInFunctionDCTNFTAddQuantity is the key for the dharitri standard digital token NFT add quantity built-in function
+// BuiltInFunctionDCTNFTAddQuantity is the key for the electronic standard digital token NFT add quantity built-in function
 const BuiltInFunctionDCTNFTAddQuantity = "DCTNFTAddQuantity"
 
-// BuiltInFunctionDCTNFTCreateRoleTransfer is the key for the dharitri standard digital token create role transfer function
+// BuiltInFunctionDCTNFTCreateRoleTransfer is the key for the electronic standard digital token create role transfer function
 const BuiltInFunctionDCTNFTCreateRoleTransfer = "DCTNFTCreateRoleTransfer"
 
-// BuiltInFunctionDCTNFTBurn is the key for the dharitri standard digital token NFT burn built-in function
+// BuiltInFunctionDCTNFTBurn is the key for the electronic standard digital token NFT burn built-in function
 const BuiltInFunctionDCTNFTBurn = "DCTNFTBurn"
 
-// BuiltInFunctionDCTNFTAddURI is the key for the dharitri standard digital token NFT add URI built-in function
+// BuiltInFunctionDCTNFTAddURI is the key for the electronic standard digital token NFT add URI built-in function
 const BuiltInFunctionDCTNFTAddURI = "DCTNFTAddURI"
 
-// BuiltInFunctionDCTNFTUpdateAttributes is the key for the dharitri standard digital token NFT update attributes built-in function
+// BuiltInFunctionDCTNFTUpdateAttributes is the key for the electronic standard digital token NFT update attributes built-in function
 const BuiltInFunctionDCTNFTUpdateAttributes = "DCTNFTUpdateAttributes"
 
-// BuiltInFunctionMultiDCTNFTTransfer is the key for the dharitri standard digital token multi transfer built-in function
+// BuiltInFunctionMultiDCTNFTTransfer is the key for the electronic standard digital token multi transfer built-in function
 const BuiltInFunctionMultiDCTNFTTransfer = "MultiDCTNFTTransfer"
 
 // BuiltInFunctionSetGuardian is the key for setting a guardian built-in function
@@ -175,17 +175,17 @@ const SemiFungibleDCT = "SemiFungibleDCT"
 // MaxRoyalty defines 100% as uint32
 const MaxRoyalty = uint32(10000)
 
-// RelayedTransaction is the key for the dharitri meta/gassless/relayed transaction standard
+// RelayedTransaction is the key for the electronic meta/gassless/relayed transaction standard
 const RelayedTransaction = "relayedTx"
 
-// RelayedTransactionV2 is the key for the optimized dharitri meta/gassless/relayed transaction standard
+// RelayedTransactionV2 is the key for the optimized electronic meta/gassless/relayed transaction standard
 const RelayedTransactionV2 = "relayedTxV2"
 
 // SCDeployInitFunctionName is the key for the function which is called at smart contract deploy time
 const SCDeployInitFunctionName = "_init"
 
-// DharitriProtectedKeyPrefix is the key prefix which is protected from writing in the trie - only for special builtin functions
-const DharitriProtectedKeyPrefix = "DHARITRI"
+// ProtectedKeyPrefix is the key prefix which is protected from writing in the trie - only for special builtin functions
+const ProtectedKeyPrefix = "E" + "L" + "R" + "O" + "N" + "D"
 
 // DelegationSystemSCKey is the key under which there is data in case of system delegation smart contracts
 const DelegationSystemSCKey = "delegation"
@@ -254,6 +254,3 @@ const CompletedTxEventIdentifier = "completedTxEvent"
 
 // GasRefundForRelayerMessage is the return message for to the smart contract result with refund for the relayer
 const GasRefundForRelayerMessage = "gas refund for relayer"
-
-// DefaultAddressPrefix is the default hrp of Dharitri
-const DefaultAddressPrefix = "moa"

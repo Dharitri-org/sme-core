@@ -28,7 +28,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
-// DCToken holds the data for a Electronic standard digital token transaction
+// DCToken holds the data for a electronic standard digital token transaction
 type DCToken struct {
 	Type          uint32        `protobuf:"varint,1,opt,name=Type,proto3" json:"Type"`
 	Value         *math_big.Int `protobuf:"bytes,2,opt,name=Value,proto3,casttypewith=math/big.Int;github.com/Dharitri-org/sme-core/data.BigIntCaster" json:"Value"`

@@ -129,6 +129,9 @@ const BuiltInFunctionGuardAccount = "GuardAccount"
 // BuiltInFunctionUnGuardAccount is the built-in function key for un-guarding an account
 const BuiltInFunctionUnGuardAccount = "UnGuardAccount"
 
+// BuiltInFunctionMigrateDataTrie is the built-in function key for migrating the data trie
+const BuiltInFunctionMigrateDataTrie = "MigrateDataTrie"
+
 // DCTRoleLocalMint is the constant string for the local role of mint for DCT tokens
 const DCTRoleLocalMint = "DCTRoleLocalMint"
 
@@ -188,7 +191,7 @@ const RelayedTransactionV2 = "relayedTxV2"
 const SCDeployInitFunctionName = "_init"
 
 // ProtectedKeyPrefix is the key prefix which is protected from writing in the trie - only for special builtin functions
-const ProtectedKeyPrefix = "D" + "H" + "A" + "R" + "I" + "T" + "R" + "I"
+const ProtectedKeyPrefix = "E" + "L" + "R" + "O" + "N" + "D"
 
 // DelegationSystemSCKey is the key under which there is data in case of system delegation smart contracts
 const DelegationSystemSCKey = "delegation"
@@ -254,6 +257,9 @@ const SignalErrorOperation = "signalError"
 
 // CompletedTxEventIdentifier is the identifier for the log that is generated when the execution of a smart contract call is done
 const CompletedTxEventIdentifier = "completedTxEvent"
+
+// InternalVMErrorsOperation is the identifier for the log that is generated when the execution of a smart contract generates an interval vm error
+const InternalVMErrorsOperation = "internalVMErrors"
 
 // GasRefundForRelayerMessage is the return message for to the smart contract result with refund for the relayer
 const GasRefundForRelayerMessage = "gas refund for relayer"

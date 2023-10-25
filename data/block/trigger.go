@@ -1,4 +1,4 @@
-//go:generate protoc -I=. -I=$GOPATH/src -I=$GOPATH/src/github.com/Dharitri-org/protobuf/protobuf  --gogoslick_out=. trigger.proto
+//go:generate protoc -I=. -I=$GOPATH/src -I=$GOPATH/src/github.com/Dharitri-org/sme-protobuf/protobuf  --gogoslick_out=. trigger.proto
 package block
 
 import "github.com/Dharitri-org/sme-core/data"

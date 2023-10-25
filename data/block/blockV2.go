@@ -1,10 +1,10 @@
-//go:generate protoc -I=. -I=$GOPATH/src -I=$GOPATH/src/github.com/Dharitri-org/protobuf/protobuf  --gogoslick_out=. blockV2.proto
+//go:generate protoc -I=. -I=$GOPATH/src -I=$GOPATH/src/github.com/Dharitri-org/sme-protobuf/protobuf  --gogoslick_out=. blockV2.proto
 package block
 
 import (
 	"fmt"
 	"math/big"
-
+    
 	"github.com/Dharitri-org/sme-core/core/check"
 	"github.com/Dharitri-org/sme-core/data"
 	"github.com/Dharitri-org/sme-core/data/headerVersionData"

@@ -4,7 +4,7 @@ package block
 import (
 	"fmt"
 	"math/big"
-    
+
 	"github.com/Dharitri-org/sme-core/core/check"
 	"github.com/Dharitri-org/sme-core/data"
 	"github.com/Dharitri-org/sme-core/data/headerVersionData"

@@ -1,3 +1,3 @@
-# sme-core
+# mx-chain-core-go
 
-sme-dharitri common components and data that can be used in other repositories as well
+mx-chain-go common components and data that can be used in other repositories as well

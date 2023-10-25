@@ -6,6 +6,7 @@ package block
 import (
 	bytes "bytes"
 	fmt "fmt"
+	block "github.com/Dharitri-org/sme-core/data/block"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	io "io"
@@ -27,15 +28,15 @@ var _ = math.Inf
 const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type ShardTriggerRegistry struct {
-	IsEpochStart                bool    `protobuf:"varint,1,opt,name=IsEpochStart,proto3" json:"IsEpochStart,omitempty"`
-	NewEpochHeaderReceived      bool    `protobuf:"varint,2,opt,name=NewEpochHeaderReceived,proto3" json:"NewEpochHeaderReceived,omitempty"`
-	Epoch                       uint32  `protobuf:"varint,3,opt,name=Epoch,proto3" json:"Epoch,omitempty"`
-	MetaEpoch                   uint32  `protobuf:"varint,4,opt,name=MetaEpoch,proto3" json:"MetaEpoch,omitempty"`
-	CurrentRoundIndex           int64   `protobuf:"varint,5,opt,name=CurrentRoundIndex,proto3" json:"CurrentRoundIndex,omitempty"`
-	EpochStartRound             uint64  `protobuf:"varint,6,opt,name=EpochStartRound,proto3" json:"EpochStartRound,omitempty"`
-	EpochFinalityAttestingRound uint64  `protobuf:"varint,7,opt,name=EpochFinalityAttestingRound,proto3" json:"EpochFinalityAttestingRound,omitempty"`
-	EpochMetaBlockHash          []byte  `protobuf:"bytes,8,opt,name=EpochMetaBlockHash,proto3" json:"EpochMetaBlockHash,omitempty"`
-	EpochStartShardHeader       *Header `protobuf:"bytes,9,opt,name=EpochStartShardHeader,proto3" json:"EpochStartShardHeader,omitempty"`
+	IsEpochStart                bool          `protobuf:"varint,1,opt,name=IsEpochStart,proto3" json:"IsEpochStart,omitempty"`
+	NewEpochHeaderReceived      bool          `protobuf:"varint,2,opt,name=NewEpochHeaderReceived,proto3" json:"NewEpochHeaderReceived,omitempty"`
+	Epoch                       uint32        `protobuf:"varint,3,opt,name=Epoch,proto3" json:"Epoch,omitempty"`
+	MetaEpoch                   uint32        `protobuf:"varint,4,opt,name=MetaEpoch,proto3" json:"MetaEpoch,omitempty"`
+	CurrentRoundIndex           int64         `protobuf:"varint,5,opt,name=CurrentRoundIndex,proto3" json:"CurrentRoundIndex,omitempty"`
+	EpochStartRound             uint64        `protobuf:"varint,6,opt,name=EpochStartRound,proto3" json:"EpochStartRound,omitempty"`
+	EpochFinalityAttestingRound uint64        `protobuf:"varint,7,opt,name=EpochFinalityAttestingRound,proto3" json:"EpochFinalityAttestingRound,omitempty"`
+	EpochMetaBlockHash          []byte        `protobuf:"bytes,8,opt,name=EpochMetaBlockHash,proto3" json:"EpochMetaBlockHash,omitempty"`
+	EpochStartShardHeader       *block.Header `protobuf:"bytes,9,opt,name=EpochStartShardHeader,proto3" json:"EpochStartShardHeader,omitempty"`
 }
 
 func (m *ShardTriggerRegistry) Reset()      { *m = ShardTriggerRegistry{} }
@@ -122,7 +123,7 @@ func (m *ShardTriggerRegistry) GetEpochMetaBlockHash() []byte {
 	return nil
 }
 
-func (m *ShardTriggerRegistry) GetEpochStartShardHeader() *Header {
+func (m *ShardTriggerRegistry) GetEpochStartShardHeader() *block.Header {
 	if m != nil {
 		return m.EpochStartShardHeader
 	}
@@ -948,7 +949,7 @@ func (this *ShardTriggerRegistry) String() string {
 		`EpochStartRound:` + fmt.Sprintf("%v", this.EpochStartRound) + `,`,
 		`EpochFinalityAttestingRound:` + fmt.Sprintf("%v", this.EpochFinalityAttestingRound) + `,`,
 		`EpochMetaBlockHash:` + fmt.Sprintf("%v", this.EpochMetaBlockHash) + `,`,
-		`EpochStartShardHeader:` + strings.Replace(fmt.Sprintf("%v", this.EpochStartShardHeader), "Header", "Header", 1) + `,`,
+		`EpochStartShardHeader:` + strings.Replace(fmt.Sprintf("%v", this.EpochStartShardHeader), "Header", "block.Header", 1) + `,`,
 		`}`,
 	}, "")
 	return s
@@ -1223,7 +1224,7 @@ func (m *ShardTriggerRegistry) Unmarshal(dAtA []byte) error {
 				return io.ErrUnexpectedEOF
 			}
 			if m.EpochStartShardHeader == nil {
-				m.EpochStartShardHeader = &Header{}
+				m.EpochStartShardHeader = &block.Header{}
 			}
 			if err := m.EpochStartShardHeader.Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
 				return err

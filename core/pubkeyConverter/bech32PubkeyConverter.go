@@ -7,7 +7,7 @@ import (
 
 	"github.com/Dharitri-org/sme-core/core"
 	"github.com/Dharitri-org/sme-core/core/check"
-	"github.com/btcsuite/btcutil/bech32"
+	"github.com/btcsuite/btcd/btcutil/bech32"
 )
 
 type config struct {

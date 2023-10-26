@@ -22,9 +22,6 @@ var ErrNilShardCoordinator = errors.New("nil shard coordinator")
 // ErrNilMarshalizer is raised when the NewTrie() function is called, but a marshalizer isn't provided
 var ErrNilMarshalizer = errors.New("no marshalizer provided")
 
-// ErrNilEmptyBlockCreator is raised when attempting to work with a nil empty block creator
-var ErrNilEmptyBlockCreator = errors.New("nil empty block creator")
-
 // ErrNilDatabase is raised when a database operation is called, but no database is provided
 var ErrNilDatabase = errors.New("no database provided")
 
@@ -63,24 +60,3 @@ var ErrNilRcvAddr = errors.New("nil receiver address")
 
 // ErrNilSndAddr signals that an operation has been attempted to or with a nil sender address
 var ErrNilSndAddr = errors.New("nil sender address")
-
-// ErrNilPointerReceiver signals that a nil pointer receiver was used
-var ErrNilPointerReceiver = errors.New("nil pointer receiver")
-
-// ErrNilPointerDereference signals that a nil pointer dereference was detected and avoided
-var ErrNilPointerDereference = errors.New("nil pointer dereference")
-
-// ErrInvalidTypeAssertion signals an invalid type assertion
-var ErrInvalidTypeAssertion = errors.New("invalid type assertion")
-
-// ErrNilScheduledRootHash signals that a nil scheduled root hash was used
-var ErrNilScheduledRootHash = errors.New("scheduled root hash is nil")
-
-// ErrScheduledRootHashNotSupported signals that a scheduled root hash is not supported
-var ErrScheduledRootHashNotSupported = errors.New("scheduled root hash is not supported")
-
-// ErrWrongTransactionsTypeSize signals that size of transactions type buffer from mini block reserved field is wrong
-var ErrWrongTransactionsTypeSize = errors.New("wrong transactions type size")
-
-// ErrNilReservedField signals that a nil reserved field was provided
-var ErrNilReservedField = errors.New("reserved field is nil")

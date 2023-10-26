@@ -4,9 +4,7 @@ import (
 	"testing"
 
 	"github.com/Dharitri-org/sme-core/core"
-	"github.com/Dharitri-org/sme-core/data"
 	"github.com/Dharitri-org/sme-core/data/block"
-	"github.com/Dharitri-org/sme-core/data/headerVersionData"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -145,9 +143,8 @@ func TestMetaBlock_SetEpoch(t *testing.T) {
 
 	epoch := uint32(10)
 	m := block.MetaBlock{}
-	err := m.SetEpoch(epoch)
+	m.SetEpoch(epoch)
 
-	assert.Nil(t, err)
 	assert.Equal(t, epoch, m.GetEpoch())
 }
 
@@ -156,9 +153,8 @@ func TestMetaBlock_SetNonce(t *testing.T) {
 
 	nonce := uint64(11)
 	m := block.MetaBlock{}
-	err := m.SetNonce(nonce)
+	m.SetNonce(nonce)
 
-	assert.Nil(t, err)
 	assert.Equal(t, nonce, m.GetNonce())
 }
 
@@ -167,9 +163,8 @@ func TestMetaBlock_SetPrevHash(t *testing.T) {
 
 	prevHash := []byte("prev hash")
 	m := block.MetaBlock{}
-	err := m.SetPrevHash(prevHash)
+	m.SetPrevHash(prevHash)
 
-	assert.Nil(t, err)
 	assert.Equal(t, prevHash, m.GetPrevHash())
 }
 
@@ -178,9 +173,8 @@ func TestMetaBlock_SetPubKeysBitmap(t *testing.T) {
 
 	pubKeysBitmap := []byte{12, 13, 14, 15}
 	m := block.MetaBlock{}
-	err := m.SetPubKeysBitmap(pubKeysBitmap)
+	m.SetPubKeysBitmap(pubKeysBitmap)
 
-	assert.Nil(t, err)
 	assert.Equal(t, pubKeysBitmap, m.GetPubKeysBitmap())
 }
 
@@ -189,9 +183,8 @@ func TestMetaBlock_SetPrevRandSeed(t *testing.T) {
 
 	prevRandSeed := []byte("previous random seed")
 	m := block.MetaBlock{}
-	err := m.SetPrevRandSeed(prevRandSeed)
+	m.SetPrevRandSeed(prevRandSeed)
 
-	assert.Nil(t, err)
 	assert.Equal(t, prevRandSeed, m.GetPrevRandSeed())
 }
 
@@ -200,9 +193,8 @@ func TestMetaBlock_SetRandSeed(t *testing.T) {
 
 	randSeed := []byte("random seed")
 	m := block.MetaBlock{}
-	err := m.SetRandSeed(randSeed)
+	m.SetRandSeed(randSeed)
 
-	assert.Nil(t, err)
 	assert.Equal(t, randSeed, m.GetRandSeed())
 }
 
@@ -211,9 +203,8 @@ func TestMetaBlock_SetRootHash(t *testing.T) {
 
 	rootHash := []byte("root hash")
 	m := block.MetaBlock{}
-	err := m.SetRootHash(rootHash)
+	m.SetRootHash(rootHash)
 
-	assert.Nil(t, err)
 	assert.Equal(t, rootHash, m.GetRootHash())
 }
 
@@ -222,9 +213,8 @@ func TestMetaBlock_SetRound(t *testing.T) {
 
 	rootHash := []byte("root hash")
 	m := block.MetaBlock{}
-	err := m.SetRootHash(rootHash)
+	m.SetRootHash(rootHash)
 
-	assert.Nil(t, err)
 	assert.Equal(t, rootHash, m.GetRootHash())
 }
 
@@ -233,9 +223,8 @@ func TestMetaBlock_SetSignature(t *testing.T) {
 
 	signature := []byte("signature")
 	m := block.MetaBlock{}
-	err := m.SetSignature(signature)
+	m.SetSignature(signature)
 
-	assert.Nil(t, err)
 	assert.Equal(t, signature, m.GetSignature())
 }
 
@@ -244,9 +233,8 @@ func TestMetaBlock_SetTimeStamp(t *testing.T) {
 
 	timestamp := uint64(100000)
 	m := block.MetaBlock{}
-	err := m.SetTimeStamp(timestamp)
+	m.SetTimeStamp(timestamp)
 
-	assert.Nil(t, err)
 	assert.Equal(t, timestamp, m.GetTimeStamp())
 }
 
@@ -255,9 +243,8 @@ func TestMetaBlock_SetTxCount(t *testing.T) {
 
 	txCount := uint32(100)
 	m := block.MetaBlock{}
-	err := m.SetTxCount(txCount)
+	m.SetTxCount(txCount)
 
-	assert.Nil(t, err)
 	assert.Equal(t, txCount, m.GetTxCount())
 }
 
@@ -358,47 +345,4 @@ func TestMetaBlock_GetOrderedCrossMiniblocksWithDstShouldWork(t *testing.T) {
 	assert.Equal(t, miniBlocksInfo[1].Round, uint64(6))
 	assert.Equal(t, miniBlocksInfo[2].Hash, []byte("hash5"))
 	assert.Equal(t, miniBlocksInfo[2].Round, uint64(7))
-}
-
-func TestMetaBlock_SetScheduledRootHash(t *testing.T) {
-	t.Parallel()
-
-	metaHdr := &block.MetaBlock{}
-	err := metaHdr.SetScheduledRootHash([]byte(""))
-	require.Equal(t, data.ErrScheduledRootHashNotSupported, err)
-}
-
-func TestMetaBlock_ValidateHeaderVersion(t *testing.T) {
-	t.Parallel()
-
-	metaHdr := &block.MetaBlock{}
-	err := metaHdr.ValidateHeaderVersion()
-	require.Nil(t, err)
-}
-
-func TestMetaBlock_SetAdditionalDataShouldDoNothing(t *testing.T) {
-	t.Parallel()
-
-	var metaBlock *block.MetaBlock
-
-	//goland:noinspection ALL
-	err := metaBlock.SetAdditionalData(&headerVersionData.AdditionalData{})
-	require.Nil(t, err)
-}
-
-func TestMetaBlock_HasScheduledMiniBlocks(t *testing.T) {
-	t.Parallel()
-
-	metaBlock := &block.MetaBlock{}
-	require.False(t, metaBlock.HasScheduledMiniBlocks())
-
-	mbHeader := &block.MiniBlockHeader{}
-	_ = mbHeader.SetProcessingType(int32(block.Normal))
-	metaBlock.MiniBlockHeaders = []block.MiniBlockHeader{*mbHeader}
-	require.False(t, metaBlock.HasScheduledMiniBlocks())
-
-	_ = mbHeader.SetProcessingType(int32(block.Scheduled))
-	metaBlock.MiniBlockHeaders = []block.MiniBlockHeader{*mbHeader}
-
-	require.True(t, metaBlock.HasScheduledMiniBlocks())
 }

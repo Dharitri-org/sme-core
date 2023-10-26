@@ -106,15 +106,3 @@ var ErrNilLogger = errors.New("nil logger")
 
 // ErrNilGoRoutineProcessor signals that a nil go routine processor has been provided
 var ErrNilGoRoutineProcessor = errors.New("nil go routine processor")
-
-// ErrNilPubkeyConverter signals that a nil public key converter has been provided
-var ErrNilPubkeyConverter = errors.New("nil pubkey converter")
-
-// ErrContextClosing signals that the parent context requested the closing of its children
-var ErrContextClosing = errors.New("context closing")
-
-// ErrDBIsClosed is raised when the DB is closed
-var ErrDBIsClosed = errors.New("DB is closed")
-
-// ErrNilEnableEpochsHandler signals that a nil enable epochs handler has been provided
-var ErrNilEnableEpochsHandler = errors.New("nil enable epochs handler")
